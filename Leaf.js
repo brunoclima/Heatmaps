@@ -9,7 +9,7 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=p
 
 var states = [{
     "type": "Feature",
-    "properties": {"nivel": "1"},
+    "properties": {"level": "1"},
     "geometry": {
         "type": "Polygon",
         "coordinates": [[
@@ -22,7 +22,7 @@ var states = [{
     }
 }, {
     "type": "Feature",
-    "properties": {"nivel": "2"},
+    "properties": {"level": "2"},
     "geometry": {
         "type": "Polygon",
         "coordinates": [[
@@ -35,7 +35,7 @@ var states = [{
     }
 }, {
     "type": "Feature",
-    "properties": {"nivel": "3"},
+    "properties": {"level": "3"},
     "geometry": {
         "type": "Polygon",
         "coordinates": [[
@@ -50,7 +50,7 @@ var states = [{
 
 L.geoJSON(states, {
     style: function(feature) {
-        switch (feature.properties.nivel) {
+        switch (feature.properties.level) {
             case '1': return {
                 color: "#027e3f",
                 weight: 10,
