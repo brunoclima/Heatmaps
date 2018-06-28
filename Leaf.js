@@ -9,27 +9,17 @@ L.tileLayer(mapboxUrl, {
     accessToken: 'pk.eyJ1IjoiYnJ1bm9jbGltYSIsImEiOiJjaml4Mjl4cHIzYWJtM3BwODczODJ0amF1In0.BrU4E_5s8aTGuD36bQvkIg'
 }).addTo(map);
 
-var states = [];
-
-
 $(function() {
    $.getJSON(urlAlagamento, function(data){
        success: {
-           states = data;
            map.createPane("Nivel 1");
            map.createPane("Nivel 2");
            map.createPane("Nivel 3");
            alert("Sucesso na requisição de dados! =)");
-//           criaLayers();
            triagem(data);
        }
    });
 });
-
-function criaLayers() {
-    L.layerGroup([nivel1, nivel2, nivel3]).addTo(map);
-    alert("layers criadas");
-};
 
 function triagem(niveis) {
     console.log(niveis);
