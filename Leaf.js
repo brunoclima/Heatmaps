@@ -1,6 +1,6 @@
 var map = L.map('leafmap').setView([-23.533773, -46.625290], 10);
 var mapboxUrl = 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiYnJ1bm9jbGltYSIsImEiOiJjaml4Mjl4cHIzYWJtM3BwODczODJ0amF1In0.BrU4E_5s8aTGuD36bQvkIg';
-var urlAlagamento = 'http://betageo.climatempo.com.br/geoserver/sc/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=sc:alertAlagamentoFake&maxFeatures=100&outputFormat=application%2Fjson';
+var urlAlagamento = 'http://betageo.climatempo.com.br/geoserver/sc/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=sc:alertAlagamentoFake&maxFeatures=1000&outputFormat=application%2Fjson';
 
 L.tileLayer(mapboxUrl, {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
