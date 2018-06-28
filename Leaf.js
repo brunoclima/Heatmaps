@@ -10,7 +10,7 @@ L.tileLayer(mapboxUrl, {
 }).addTo(map);
 
 $(function() {
-   $.getJSON(urlAlagamento, function(data){
+   $.getJSON(urlAlagamento, function(data) {
        success: {
            map.createPane("Nivel 1");
            map.createPane("Nivel 2");
@@ -36,6 +36,7 @@ function triagem(niveis) {
                     pane: "Nivel 1"
                 };
                 break;
+
                 case 2: return {
                     color: "#f3c800",
                     weight: 10,
@@ -45,6 +46,7 @@ function triagem(niveis) {
                     pane: "Nivel 2"
                 };
                 break;
+
                 case 3: return {
                     color: "#c61620",
                     weight: 10,
